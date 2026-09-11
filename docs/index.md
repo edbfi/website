@@ -1,32 +1,89 @@
 ---
 hide:
   - navigation
-title: Home
+  - toc
 ---
 
-## Welcome
+<div class="e74-hero" markdown>
 
-Go check out the rest of our website to see how you can get started with your favorite app. Most images come with docker cli or compose examples. If you've got any questions, feel free to join the [discord](https://discord.gg/FycMN9gTC3){ target="_blank" rel="noopener" } server.
+# :material-docker: dc.edb.fi { .e74-hero-title }
 
-## Affiliate Links
+**Docker containers for the media server enthusiast**
+{ .e74-hero-subtitle }
 
-[![Proton](img/protonvpn@2x.png){ class="vpnbanner" width="320" height="50" }](https://go.getproton.me/aff_c?offer_id=26&aff_id=7223){ target="_blank" rel="noopener" }
-[![PIA](img/piavpn728x90.png){ class="vpnbanner" width="404" height="50" }](http://www.privateinternetaccess.com/offer/hotio.dev_hsm018qg){ target="_blank" rel="noopener" }
-
-## Donations
-
-If you like what I do... :octicons-heart-fill-24:{ id="beating-heart" }
-
-<div id="donate-grid" class="grid cards" markdown>
-
-- :material-github: become a [__GitHub Sponsor__](https://github.com/sponsors/mrhotio){ target="_blank" rel="noopener" } and support me
-- :fontawesome-solid-money-bill-wave: make a contribution to [__Open Collective__](https://opencollective.com/hotio_collective/donate?interval=month&amount=10){ target="_blank" rel="noopener" }
-- :material-bitcoin: send some [__Bitcoin__](https://bitcoinblockexplorers.com/address/bc1q6zkemu2lacynfg6d6x70l0da0mdpf06pn83jm5){ target="_blank" rel="noopener" } my way
+Revived projects, enhanced images, and original creations — all with Docker CLI and Compose examples.
 
 </div>
 
-## Support
+<div class="e74-registry" markdown>
 
-Join us on Discord!
+<div class="e74-registry-header" markdown>
 
-[![Discord](img/discord.svg){ width="300" height="82" }](https://discord.gg/FycMN9gTC3){ target="_blank" rel="noopener" }
+## :octicons-container-16: Container Registry { .e74-registry-title }
+
+</div>
+
+<div class="e74-registry-category e74-registry-category--base" markdown>
+
+**:octicons-server-16: Foundation**{ .e74-category-label }
+
+<div class="e74-container-pills" markdown>
+
+[base-image](containers/base-image.md){ .e74-pill .e74-pill--base }
+
+</div>
+
+</div>
+
+<div class="e74-registry-category e74-registry-category--apps" markdown>
+
+**:octicons-repo-forked-16: Hotio Forks**{ .e74-category-label }
+
+<div class="e74-container-pills" markdown>
+
+[Caddy](containers/caddy.md){ .e74-pill .e74-pill--apps }
+[qBittorrent](containers/qbittorrent.md){ .e74-pill .e74-pill--apps }
+[qFlood](containers/qflood.md){ .e74-pill .e74-pill--apps }
+[SABnzbd](containers/sabnzbd.md){ .e74-pill .e74-pill--apps }
+
+</div>
+
+</div>
+
+<div class="e74-registry-category e74-registry-category--custom" markdown>
+
+**:octicons-code-16: Original Projects**{ .e74-category-label }
+
+<div class="e74-container-pills" markdown>
+
+[Obzorarr](containers/obzorarr.md){ .e74-pill .e74-pill--custom }
+
+</div>
+
+</div>
+
+</div>
+
+<div class="e74-support" markdown>
+
+## :octicons-heart-16: Support
+
+This project builds on [hotio's](https://hotio.dev) excellent work. Consider supporting hotio:
+
+<div class="e74-button-group" markdown>
+
+[:material-github: GitHub Sponsors](https://github.com/sponsors/mrhotio){ .md-button .e74-btn-sponsor target=_blank rel="noopener" }
+[:fontawesome-solid-money-bill-wave: Open Collective](https://opencollective.com/hotio_collective/donate?interval=month&amount=10){ .md-button target=_blank rel="noopener" }
+
+</div>
+
+**Need a VPN?** Use hotio's affiliate links:
+[ProtonVPN](https://hotio.dev/protonvpn){ target=_blank rel="noopener" } · [PIA](https://hotio.dev/pia){ target=_blank rel="noopener" }
+
+</div>
+
+<div class="e74-footer-note" markdown>
+
+For support, open an issue on the relevant [GitHub repository](https://github.com/edbfi){ target=_blank rel="noopener" }.
+
+</div>

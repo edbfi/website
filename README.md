@@ -1,6 +1,6 @@
 # Container documentation
 
-Documentation for the retained edbfi container images at https://dc.edb.fi. Based on hotio/website, with canonical content maintained in edbfi/repo-patches.
+Documentation for the retained edbfi container images at https://web.edb.fi. Based on hotio/website, with canonical content maintained in edbfi/repo-patches.
 
 ## Validate locally
 

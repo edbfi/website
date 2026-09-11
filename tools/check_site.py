@@ -5,7 +5,7 @@ import json
 
 root = Path(__file__).resolve().parent.parent
 expected = {p.stem for p in (root / 'docs/containers').glob('*.md')}
-if expected != {'base-image', 'caddy', 'obzorarr', 'otpravkarr', 'qbittorrent', 'qflood', 'sabnzbd'}:
+if expected != {'base-image', 'caddy', 'obzorarr', 'otpravkarr', 'qbittorrent', 'qflood', 'sabnzbd', 'zondarr'}:
     raise SystemExit('Unexpected container inventory')
 if (root / 'docs/CNAME').read_text().strip() != 'web.edb.fi':
     raise SystemExit('Incorrect custom domain')
@@ -20,4 +20,4 @@ for asset in ['img/edbfi.svg', 'javascripts/tagcopy.js', 'javascripts/tablesort.
               'stylesheets/extra-13.css', 'stylesheets/extra-custom.css']:
     if not (root / '.build' / asset).is_file():
         raise SystemExit('Missing generated asset: ' + asset)
-print('Seven canonical container pages, tag data, domain and runtime assets verified')
+print('Eight canonical container pages, tag data, domain and runtime assets verified')

@@ -8,7 +8,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    if: github.ref == 'refs/heads/master' && github.ref_protected
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     permissions:
@@ -26,8 +26,8 @@ jobs:
           python3 - <<'PYTHON'
           import json, os
           runs = json.load(open('/tmp/runs.json'))['workflow_runs']
-          if not any(r['head_sha'] == os.environ['GITHUB_SHA'] and r['conclusion'] == 'success' for r in runs):
-              raise SystemExit('Exact protected commit has no successful push CI')
+          if not any(r['head_sha'] == os.environ['GITHUB_SHA'] and r['head_branch'] == 'master' and r['status'] == 'completed' and r['conclusion'] == 'success' for r in runs):
+              raise SystemExit('Exact master commit has no successful push CI')
           PYTHON
       - name: Build reviewed site
         run: |

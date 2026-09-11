@@ -1,34 +1,33 @@
 {
-  "nightly": {
-    "commit_message": "Modified: meta.json",
-    "commit_sha": "ed48634d4729ff2219014124e1385af8964fd6d9",
-    "description": "nightly",
-    "last_updated": "2026-09-10T13:22:13.000Z",
-    "last_updated_url": "https://github.com/engels74/qflood/actions/runs/34482217668",
+  "release": {
+    "commit_message": "fix(image): preserve qBittorrent aliases for composite versions (#3)",
+    "commit_sha": "b924cd2f50a1c388f7fd5c95952c6ca9452e1cc0",
+    "description": "Releases",
+    "last_updated": "2026-09-11T12:46:07Z",
+    "last_updated_url": "https://github.com/edbfi/qflood/actions/runs/34600454530",
     "tags": [
-      "",
+      "release",
+      "release-b924cd2",
+      "release-5.2.3--4.16.1",
+      "release-v5",
+      "release-v5.2",
+      "release-v5.2.3",
+      "latest"
+    ]
+  },
+  "nightly": {
+    "commit_message": "fix(image): preserve qBittorrent aliases for composite versions (#4)",
+    "commit_sha": "24fc91ce26d8b8fe5ea410b96c855d1b67f375a2",
+    "description": "Pinned nightly snapshot",
+    "last_updated": "2026-09-11T12:41:40Z",
+    "last_updated_url": "https://github.com/edbfi/qflood/actions/runs/34600062043",
+    "tags": [
       "nightly",
-      "nightly-ed48634",
+      "nightly-24fc91c",
       "nightly-5.2.3--33316725515",
       "nightly-v5",
       "nightly-v5.2",
       "nightly-v5.2.3"
-    ]
-  },
-  "release": {
-    "commit_message": "Modified: meta.json",
-    "commit_sha": "4fac00610fb1ee0fb711ebcaea5e6821fc0122c6",
-    "description": "Releases",
-    "last_updated": "2026-09-10T13:22:15.000Z",
-    "last_updated_url": "https://github.com/engels74/qflood/actions/runs/34482220979",
-    "tags": [
-      "latest",
-      "release",
-      "release-4fac006",
-      "release-5.2.3--4.16.1",
-      "release-v5",
-      "release-v5.2",
-      "release-v5.2.3"
     ]
   }
 }

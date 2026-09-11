@@ -7,11 +7,11 @@ root = Path(__file__).resolve().parent.parent
 expected = {p.stem for p in (root / 'docs/containers').glob('*.md')}
 if expected != {'base-image', 'caddy', 'obzorarr', 'qbittorrent', 'qflood', 'sabnzbd'}:
     raise SystemExit('Unexpected container inventory')
-if (root / 'docs/CNAME').read_text().strip() != 'dc.edb.fi':
+if (root / 'docs/CNAME').read_text().strip() != 'web.edb.fi':
     raise SystemExit('Incorrect custom domain')
 for name in expected:
     html = (root / '.build/containers' / name / 'index.html').read_text()
-    if 'https://dc.edb.fi/containers/' + name + '/' not in html:
+    if 'https://web.edb.fi/containers/' + name + '/' not in html:
         raise SystemExit('Incorrect canonical: ' + name)
     if 'ghcr.io/engels74' in html or 'engels74.net' in html:
         raise SystemExit('Obsolete image/domain reference: ' + name)

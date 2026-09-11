@@ -1,32 +1,53 @@
 name: Deploy Website
-concurrency:
-  group: ${{ github.repository }}-deploy
-  cancel-in-progress: true
 on:
-  push:
-    branches:
-      - master
-      - main
+  workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
 jobs:
+  build:
+    if: github.ref == 'refs/heads/master' && github.ref_protected
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - name: Require successful CI for this exact commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/ci.yml/runs?head_sha=$GITHUB_SHA&event=push" > /tmp/runs.json
+          python3 - <<'PYTHON'
+          import json, os
+          runs = json.load(open('/tmp/runs.json'))['workflow_runs']
+          if not any(r['head_sha'] == os.environ['GITHUB_SHA'] and r['conclusion'] == 'success' for r in runs):
+              raise SystemExit('Exact protected commit has no successful push CI')
+          PYTHON
+      - name: Build reviewed site
+        run: |
+          python3 -m venv /tmp/site-build
+          /tmp/site-build/bin/pip install -r requirements.txt
+          /tmp/site-build/bin/zensical build --strict
+          python3 tools/check_site.py
+      - uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: .build
   deploy:
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
     steps:
-      - uses: actions/configure-pages@v6
-      - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
-        with:
-          python-version: 3.x
-      - run: pip install zensical
-      - run: zensical build --clean 
-      - uses: actions/upload-pages-artifact@v5
-        with:
-          path: .build
-      - uses: actions/deploy-pages@v5
+      - uses: actions/deploy-pages@v5.0.1
         id: deployment

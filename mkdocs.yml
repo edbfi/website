@@ -1,31 +1,27 @@
-site_name: hotio.dev
-site_url: https://hotio.dev
-site_author: hotio
-site_description: Documentation for all Docker images maintained by hotio.
-copyright: '&copy; 2026 hotio<br>Logos based on work by <a href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noopener">Freepik</a> and <a href="https://freeicons.io/profile/6200" target="_blank" rel="noopener">Soni Sokell</a>'
-repo_name: hotio
-repo_url: https://github.com/hotio
-edit_uri: 'website/edit/master/docs'
+site_name: dc.edb.fi
+site_url: https://dc.edb.fi
+site_author: edbfi
+site_description: Documentation for Docker images maintained by edbfi.
+copyright: 'Copyright &copy; 2023-2026 engels74<br>Based on <a href="https://hotio.dev" target="_blank" rel="noopener">hotio.dev</a>. Logos based on work by <a href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noopener">Freepik</a> from <a href="https://www.flaticon.com" target="_blank" rel="noopener">flaticon.com</a> and <a href="https://freeicons.io/profile/6200" target="_blank" rel="noopener">Soni Sokell</a> on <a href="https://freeicons.io" target="_blank" rel="noopener">freeicons.io</a>'
+repo_name: edbfi/repo-patches
+repo_url: https://github.com/edbfi/repo-patches
+edit_uri: 'edit/main/hweb-content/docs/'
 site_dir: .build
 docs_dir: docs
 
 extra:
   social:
   - icon: fontawesome/solid/heart
-    link: '/#donations'
-    name: Donate
-  - icon: fontawesome/brands/discord
-    link: 'https://discord.gg/FycMN9gTC3'
-    name: Discord
+    link: 'https://github.com/sponsors/mrhotio'
+    name: Donate to Hotio
   - icon: fontawesome/brands/github
-    link: 'https://github.com/hotio'
+    link: 'https://github.com/edbfi'
     name: GitHub
-  status:
-    deprecated: This image is no longer receiving updates
-    new: This image has recently been added
 
 extra_css:
   - stylesheets/extra-13.css
+  - stylesheets/extra-custom.css
+
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - javascripts/tablesort.js
@@ -35,7 +31,7 @@ theme:
   icon:
     repo: fontawesome/brands/github
     annotation: material/information
-  favicon: img/favicon.ico
+  favicon: img/edbfi.svg
   features:
     - navigation.instant
     - navigation.instant.prefetch
@@ -51,14 +47,28 @@ theme:
     - content.code.select
     - content.tooltips
     - content.tabs.link
-    - content.action.edit
-    - content.action.view
     - toc.follow
   language: en
-  logo: img/hotio-circle.svg
+  logo: img/edbfi.svg
   name: material
   palette:
-    scheme: hotio
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: DM Sans
+    code: JetBrains Mono
   custom_dir: overrides
 
 markdown_extensions:
@@ -90,39 +100,13 @@ markdown_extensions:
 nav:
 - Home: index.md
 - Containers:
-  - Base:
-    - containers/base.md
+  - Base Images:
+    - edbfi/base-image: containers/base-image.md
   - Apps:
-    - containers/autoscan.md
-    - containers/bazarr.md
-    - containers/caddy.md
-    - containers/cloudflareddns.md
-    - containers/doplarr.md
-    - containers/duplicacy.md
-    - containers/jackett.md
-    - containers/jellyfin.md
-    - containers/lidarr.md
-    - containers/mergerfs.md
-    - containers/nzbget.md
-    - containers/nzbhydra2.md
-    - containers/plex.md
-    - containers/prowlarr.md
-    - containers/qbitmanage.md
-    - containers/qbittorrent.md
-    - containers/qui.md
-    - containers/radarr.md
-    - containers/requestrr.md
-    - containers/rflood.md
-    - containers/sabnzbd.md
-    - containers/seerr.md
-    - containers/slskd.md
-    - containers/sonarr.md
-    - containers/stash.md
-    - containers/tautulli.md
-    - containers/unpackerr.md
-    - containers/whisparr.md
-- Scripts:
-  - scripts/sysinfo.md
-  - scripts/pullio.md
-  - scripts/arr-discord-notifier.md
+    - edbfi/caddy: containers/caddy.md
+    - edbfi/qbittorrent: containers/qbittorrent.md
+    - edbfi/qflood: containers/qflood.md
+    - edbfi/sabnzbd: containers/sabnzbd.md
+  - edbfi:
+    - edbfi/obzorarr: containers/obzorarr.md
 - FAQ: faq.md

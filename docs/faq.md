@@ -1,108 +1,34 @@
 ---
 hide:
   - navigation
-title: FAQ
 ---
 
-## Troubleshooting
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var result = window.confirm(
+        "The FAQ is maintained on hotio.dev.\n\n" +
+        "Click OK to be redirected to hotio.dev/faq\n" +
+        "Click Cancel to stay on this page."
+    );
 
-??? question "Someone asked you for a 'docker-compose' snippet...How do you give them that?"
+    if (result) {
+        window.location.href = "https://hotio.dev/faq";
+    }
+});
+</script>
 
-    If you are not using `docker-compose`, that can sound like a daunting task. Have no fear though, the following cli command spits it out.
+## FAQ
 
-    ```shell linenums="1"
-    docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro ghcr.io/red5d/docker-autocompose <container-name-or-id> [<additional-names-or-ids>]
-    ```
+The FAQ content is maintained on hotio.dev and shared across all hotio-based images.
 
-    Now you should upload this to [logs.notifiarr.com](https://logs.notifiarr.com){ target="_blank" rel="noopener" } after removing personal details and passwords.
+If you were not automatically redirected, please visit **[hotio.dev/faq](https://hotio.dev/faq){: target=_blank rel="noopener" }**.
 
-## Installation
+!!! info "Why redirect?"
 
-??? question "Installing Docker, how and where?"
+    The FAQ content is maintained by hotio and is shared across all hotio-based images. To avoid duplication and ensure you always have the most up-to-date information, we redirect to the original source.
 
-    I'd have a look at the official [Docker Engine](https://docs.docker.com/engine/install/){ target="_blank" rel="noopener" } installation instructions.
+!!! tip "Quick Links"
 
-## Guides
-
-??? question "I would like to execute my own scripts on startup, how would I do this?"
-
-    This will only work for containers using `s6 overlay`, recognisable by `ENVIRONMENT` printed at the top of the log when the container starts.
-
-    If you have a need to do additional stuff when the container starts or stops, you can mount your script with the volume `/docker/host/my-script.sh:/etc/cont-init.d/99-my-script` to execute your script on container start or `/docker/host/my-script.sh:/etc/cont-finish.d/99-my-script` to execute it when the container stops. An example script can be seen below.
-
-    ```shell linenums="1"
-    #!/command/with-contenv bash
-    echo "Hello, this is me, your script."
-    ```
-
-??? question "How can I get a static IP for one of my containers using 'docker-compose'?"
-
-    Here's a basic docker-compose example that sets up a custom network and gives the plex container a static IP.
-
-    ```yaml linenums="1"
-    version: "3.7"
-
-    networks:
-      my-custom-network:
-        name: my-custom-network
-        driver: bridge
-        ipam:
-          driver: default
-          config:
-            - subnet: 10.1.0.0/24
-
-    services:
-      plex:
-        container_name: plex
-        image: hotio/plex
-        ports:
-          - "32400:32400"
-        networks:
-          my-custom-network:
-            ipv4_address: 10.1.0.100
-        ...
-
-      radarr:
-        container_name: radarr
-        image: hotio/radarr
-        ports:
-          - "7878:7878"
-        networks:
-          - my-custom-network
-        ...
-    ```
-
-??? question "How do I route a container's traffic through a VPN container?"
-
-    Small docker-compose example below. Notice the `...`, this isn't a copy/paste ready to go example.
-
-    ```yaml linenums="1"
-    version: "3.7"
-
-    services:
-      qbittorrent:
-        hostname: qbittorrent.internal 
-        container_name: qbittorrent
-        image: hotio/qbittorrent
-        ports:
-          - "8080:8080"
-          - "9117:9117"
-        environment:
-          ...
-          - VPN_EXPOSE_PORTS_ON_LAN=9117/tcp
-        ...
-
-      jackett:
-        container_name: jackett
-        image: hotio/jackett
-        network_mode: "service:qbittorrent"
-        ...
-    ```
-
-??? question "Got any Docker guides?"
-
-    Take a look [here](https://wiki.servarr.com/Docker_Guide){ target="_blank" rel="noopener" } for an extensive guide on best practises from the *arr team.
-
-??? question "But, but, how do I configure all this stuff?"
-
-    Maybe TRaSH from [TRaSH Guides](https://trash-guides.info){ target="_blank" rel="noopener" } can help...
+    - [Docker Troubleshooting](https://hotio.dev/faq/#docker){: target=_blank rel="noopener" }
+    - [Permissions Issues](https://hotio.dev/faq/#permissions){: target=_blank rel="noopener" }
+    - [VPN Configuration](https://hotio.dev/faq/#vpn){: target=_blank rel="noopener" }

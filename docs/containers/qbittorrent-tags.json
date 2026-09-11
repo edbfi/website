@@ -1,18 +1,18 @@
 {
   "release": {
-    "commit_message": "Modified: meta.json",
-    "commit_sha": "b950dbdcdcd2295dbdde049c5743aba36c00842d",
+    "commit_message": "chore(image): migrate qBittorrent and native runtime validation (#1)",
+    "commit_sha": "f60497781683f99a7a6dbd75ffeab3268b543b83",
     "description": "Releases",
-    "last_updated": "2026-09-10T14:15:28.000Z",
-    "last_updated_url": "https://github.com/engels74/qbittorrent/actions/runs/34487860153",
+    "last_updated": "2026-09-11T12:01:17Z",
+    "last_updated_url": "https://github.com/edbfi/qbittorrent/actions/runs/34596676877",
     "tags": [
-      "latest",
       "release",
-      "release-b950dbd",
+      "release-f604977",
       "release-5.2.3",
       "release-v5",
       "release-v5.2",
-      "release-v5.2.3"
+      "release-v5.2.3",
+      "latest"
     ]
   }
 }

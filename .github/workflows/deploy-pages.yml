@@ -1,6 +1,11 @@
 name: Deploy Website
 on:
   workflow_dispatch:
+    inputs:
+      expected-default-sha:
+        description: Exact default-branch commit requested after a checked merge
+        type: string
+        default: ''
 permissions:
   contents: read
 concurrency:
@@ -15,6 +20,10 @@ jobs:
       contents: read
       actions: read
     steps:
+      - uses: edbfi/automation/actions/dispatch-guard@v1.0.0
+        with:
+          token: ${{ github.token }}
+          expected-default-sha: ${{ inputs.expected-default-sha }}
       - uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
@@ -22,12 +31,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/ci.yml/runs?head_sha=$GITHUB_SHA&event=push" > /tmp/runs.json
+          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/ci.yml/runs?head_sha=$GITHUB_SHA&branch=master" > /tmp/runs.json
           python3 - <<'PYTHON'
           import json, os
           runs = json.load(open('/tmp/runs.json'))['workflow_runs']
-          if not any(r['head_sha'] == os.environ['GITHUB_SHA'] and r['head_branch'] == 'master' and r['status'] == 'completed' and r['conclusion'] == 'success' for r in runs):
-              raise SystemExit('Exact master commit has no successful push CI')
+          final = next((r for r in runs if r['event'] in {'push', 'workflow_dispatch'}), None)
+          if not (final and final['head_sha'] == os.environ['GITHUB_SHA'] and final['head_branch'] == 'master' and final['status'] == 'completed' and final['conclusion'] == 'success'):
+              raise SystemExit('Exact master commit has no successful final CI')
           PYTHON
       - name: Build reviewed site
         run: |
@@ -46,8 +56,13 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     permissions:
+      contents: read
       pages: write
       id-token: write
     steps:
+      - uses: edbfi/automation/actions/dispatch-guard@v1.0.0
+        with:
+          token: ${{ github.token }}
+          expected-default-sha: ${{ inputs.expected-default-sha }}
       - uses: actions/deploy-pages@v5.0.1
         id: deployment

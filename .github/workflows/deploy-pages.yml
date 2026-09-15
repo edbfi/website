@@ -20,7 +20,7 @@ jobs:
       contents: read
       actions: read
     steps:
-      - uses: edbfi/automation/actions/dispatch-guard@v1.1.2
+      - uses: edbfi/automation/actions/dispatch-guard@v1.1.3
         with:
           token: ${{ github.token }}
           expected-default-sha: ${{ inputs.expected-default-sha }}
@@ -60,7 +60,7 @@ jobs:
       pages: write
       id-token: write
     steps:
-      - uses: edbfi/automation/actions/dispatch-guard@v1.1.2
+      - uses: edbfi/automation/actions/dispatch-guard@v1.1.3
         with:
           token: ${{ github.token }}
           expected-default-sha: ${{ inputs.expected-default-sha }}

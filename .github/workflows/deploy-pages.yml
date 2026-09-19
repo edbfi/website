@@ -1,9 +1,13 @@
 name: Deploy Website
 on:
+  workflow_run:
+    workflows: [ci]
+    types: [completed]
+    branches: [master]
   workflow_dispatch:
     inputs:
       expected-default-sha:
-        description: Exact default-branch commit requested after a checked merge
+        description: Exact current default revision; empty selects current master
         type: string
         default: ''
 permissions:
@@ -13,32 +17,39 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    if: github.ref == 'refs/heads/master'
+    if: >-
+      github.ref == 'refs/heads/master' &&
+      (github.event_name == 'workflow_dispatch' ||
+       (github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.head_repository.full_name == github.repository &&
+        contains(fromJSON('["push", "workflow_dispatch"]'), github.event.workflow_run.event)))
     runs-on: ubuntu-26.04
     timeout-minutes: 15
     permissions:
       contents: read
       actions: read
+    outputs:
+      sha: ${{ steps.revision.outputs.sha }}
     steps:
-      - uses: edbfi/automation/actions/dispatch-guard@v2.0.0
-        with:
-          token: ${{ github.token }}
-          expected-default-sha: ${{ inputs.expected-default-sha }}
-      - uses: actions/checkout@v7.0.1
-        with:
-          persist-credentials: false
-      - name: Require successful CI for this exact commit
+      - name: Select validated revision
+        id: revision
         env:
           GH_TOKEN: ${{ github.token }}
+          DEPLOY_SHA: ${{ github.event.workflow_run.head_sha || inputs.expected-default-sha || github.sha }}
         run: |
-          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/ci.yml/runs?head_sha=$GITHUB_SHA&branch=master" > /tmp/runs.json
-          python3 - <<'PYTHON'
-          import json, os
-          runs = json.load(open('/tmp/runs.json'))['workflow_runs']
-          final = next((r for r in runs if r['event'] in {'push', 'workflow_dispatch'}), None)
-          if not (final and final['head_sha'] == os.environ['GITHUB_SHA'] and final['head_branch'] == 'master' and final['status'] == 'completed' and final['conclusion'] == 'success'):
-              raise SystemExit('Exact master commit has no successful final CI')
-          PYTHON
+          [[ "$DEPLOY_SHA" =~ ^[0-9a-f]{40}$ ]]
+          current="$(gh api "repos/$GITHUB_REPOSITORY/branches/master" --jq .commit.sha)"
+          test "$current" = "$DEPLOY_SHA"
+          echo "sha=$DEPLOY_SHA" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: ${{ steps.revision.outputs.sha }}
+          persist-credentials: false
+      - name: Require current successful CI
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEPLOY_SHA: ${{ steps.revision.outputs.sha }}
+        run: python3 tools/check_deploy.py
       - name: Build reviewed site
         run: |
           python3 -m venv /tmp/site-build
@@ -57,12 +68,21 @@ jobs:
     timeout-minutes: 10
     permissions:
       contents: read
+      actions: read
       pages: write
       id-token: write
     steps:
-      - uses: edbfi/automation/actions/dispatch-guard@v2.0.0
+      - uses: actions/checkout@v7.0.1
         with:
-          token: ${{ github.token }}
-          expected-default-sha: ${{ inputs.expected-default-sha }}
+          ref: ${{ needs.build.outputs.sha }}
+          persist-credentials: false
+      - name: Recheck revision and CI immediately before publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEPLOY_SHA: ${{ needs.build.outputs.sha }}
+        run: python3 tools/check_deploy.py
       - uses: actions/deploy-pages@v5.0.1
         id: deployment
+defaults:
+  run:
+    shell: bash

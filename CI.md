@@ -1,16 +1,24 @@
 # Dependency updates and validation
 
-Renovate dependency updates, including majors and shared-policy versions, merge
-unattended only after all four current-head jobs pass: guard, hygiene, website,
-and ci / required. The checked action verifies genuine author sign-offs and
-requests full final CI for the exact merged commit. Explicit dispatches validate
-the current PR or default-branch SHA at the start and aggregate gate.
+Renovate owns ongoing dependency merging after the protected native canary
+[automation#39](https://github.com/edbfi/automation/pull/39). Native PR rebase merges
+retain genuine author sign-offs. All application jobs—guard, hygiene and website—
+must pass the fail-closed `ci / required` aggregate for the current head and base.
+The separately required `policy / ci / policy` check validates Conventional Commit
+titles, author-matching DCO, Renovate provenance, reviews and hold labels.
+Protection requires both checks from GitHub Actions and up-to-date branches.
+Release ages and review restrictions remain enforced; shared automation
+configuration updates remain manual. Platform automerge is disabled, and the
+legacy Actions merger and maintainer merge commands are retired.
 
-Hygiene retains full workflow lint and per-commit Conventional Commit/DCO checks.
-The website lane retains its strict build. No dashboard approval, branch
-protections or rulesets are configured; native GitHub automerge stays disabled.
-Other changes retain exact head/base, full diff, author/DCO and full CI/artifact
-review through the maintainer's ghmerge process, followed by final verification.
+Hygiene retains workflow lint, commit conventions and deployment freshness tests.
+The website lane runs a strict build and generated-site checks, then serves the
+built output and verifies routes and local assets through mandatory HTTP/content
+assertions. This does not execute JavaScript or prove browser hydration. Explicit
+CI dispatches verify the current PR/default revision at the start and aggregate;
+they cannot substitute for a missing policy check. Policy metadata/review events
+refresh independently without cancelling earlier evaluations. Inspect complete
+default-branch CI and deployment results after each merge.
 
 Successful exact-default CI triggers the existing Pages workflow for web.edb.fi.
 It validates the requested revision and successful final push or dispatched CI

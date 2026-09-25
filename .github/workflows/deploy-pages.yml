@@ -5,11 +5,6 @@ on:
     types: [completed]
     branches: [master]
   workflow_dispatch:
-    inputs:
-      expected-default-sha:
-        description: Exact current default revision; empty selects current master
-        type: string
-        default: ''
 permissions:
   contents: read
 concurrency:
@@ -35,7 +30,7 @@ jobs:
         id: revision
         env:
           GH_TOKEN: ${{ github.token }}
-          DEPLOY_SHA: ${{ github.event.workflow_run.head_sha || inputs.expected-default-sha || github.sha }}
+          DEPLOY_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
         run: |
           [[ "$DEPLOY_SHA" =~ ^[0-9a-f]{40}$ ]]
           current="$(gh api "repos/$GITHUB_REPOSITORY/branches/master" --jq .commit.sha)"

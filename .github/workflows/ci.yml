@@ -55,7 +55,7 @@ jobs:
           /tmp/site-build/bin/zensical build --strict
           python3 tools/check_site.py
       - name: Serve and load generated site
-        uses: edbfi/automation/actions/smoke@v4.0.0
+        uses: edbfi/automation/actions/smoke@v4.1.0
         with:
           start-command: python3 -m http.server 4321 --bind 127.0.0.1 --directory .build
           url: http://127.0.0.1:4321/
@@ -74,7 +74,7 @@ jobs:
     runs-on: ubuntu-26.04
     timeout-minutes: 5
     steps:
-      - uses: edbfi/automation/actions/gate@v4.0.0
+      - uses: edbfi/automation/actions/gate@v4.1.0
         with:
           needs: ${{ toJSON(needs) }}
           required: hygiene website

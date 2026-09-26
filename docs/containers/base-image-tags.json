@@ -1,14 +1,14 @@
 {
   "alpinevpn": {
-    "commit_message": "Modified: meta.json",
-    "commit_sha": "7b71c367cfe24970d9be7b691e6f644f9af03491",
+    "commit_message": "ci: refresh alpinevpn from hotio with edbfi customizations (#25)\n\nRestore upstream hotio automation with edbfi customizations.\n\nSigned-off-by: edbfi <326875205+edbfi@users.noreply.github.com>",
+    "commit_sha": "7f593debca0da5db1578fadfa41587a2a2f4e677",
     "description": "Alpine 3.23",
-    "last_updated": "2026-09-10T12:33:02.000Z",
-    "last_updated_url": "https://github.com/engels74/base-image/actions/runs/34477357208",
+    "last_updated": "2026-09-26T19:02:37.000Z",
+    "last_updated_url": "https://github.com/edbfi/base-image/actions/runs/36264662892",
     "tags": [
       "",
       "alpinevpn",
-      "alpinevpn-7b71c36",
+      "alpinevpn-7f593de",
       "",
       "",
       "",

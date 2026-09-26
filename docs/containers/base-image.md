@@ -26,9 +26,9 @@ title: edbfi/base-image
       </tr>
     </thead>
     <tbody id="tags-table-body">
-<tr><td><div id="tag1001" onclick="CopyToClipboard('tag1001');return false;" class="tag-decoration">alpinevpn</div></td><td>Alpine with VPN support</td><td><a href="https://github.com/edbfi/base-image/commits/alpinevpn" target="_blank">View commits</a></td><td><a href="https://github.com/edbfi/base-image/actions" target="_blank">View builds</a></td></tr>
-<tr><td><div id="tag1002" onclick="CopyToClipboard('tag1002');return false;" class="tag-decoration">noblevpn</div></td><td>Noble (Ubuntu) with VPN support</td><td><a href="https://github.com/edbfi/base-image/commits/noblevpn" target="_blank">View commits</a></td><td><a href="https://github.com/edbfi/base-image/actions" target="_blank">View builds</a></td></tr>
-    </tbody>
+<tr><td><div id="tag398" onclick="CopyToClipboard('tag398');return false;" class="tag-decoration">alpinevpn</div><div id="tag4789" onclick="CopyToClipboard('tag4789');return false;" class="tag-decoration">alpinevpn-7f593de</div></td><td>Alpine 3.23</td><td><a href="https://github.com/edbfi/base-image/commit/7f593debca0da5db1578fadfa41587a2a2f4e677" target="_blank">ci: refresh alpinevpn from hotio with edbfi customizations (#25)--Restore upstream hotio automation with edbfi customizations.--Signed-off-by: edbfi <326875205+edbfi@users.noreply.github.com></a></td><td><a href="https://github.com/edbfi/base-image/actions/runs/36264662892" target="_blank">2026-09-26 19:02:37</a></td></tr>
+<tr><td><div id="tag2775" onclick="CopyToClipboard('tag2775');return false;" class="tag-decoration">noblevpn</div><div id="tag16747" onclick="CopyToClipboard('tag16747');return false;" class="tag-decoration">noblevpn-db00842</div></td><td>Ubuntu 24.04</td><td><a href="https://github.com/edbfi/base-image/commit/db00842cfd0efd038ec1280496b015d339a0433f" target="_blank">Modified: packages.txt</a></td><td><a href="https://github.com/engels74/base-image/actions/runs/34504520072" target="_blank">2026-09-10 16:50:06</a></td></tr>
+</tbody>
   </table>
 </div>
 

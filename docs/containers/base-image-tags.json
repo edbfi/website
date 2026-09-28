@@ -16,15 +16,15 @@
     ]
   },
   "noblevpn": {
-    "commit_message": "ci: refresh noblevpn from hotio with edbfi customizations (#26)\n\nRestore upstream hotio automation with edbfi customizations.\n\nSigned-off-by: edbfi <326875205+edbfi@users.noreply.github.com>",
-    "commit_sha": "7d5b7da0207ae1e01871b405ce9ad42ed3aee630",
+    "commit_message": "Modified: packages.txt",
+    "commit_sha": "25084a783f37c8c2edf9be523ed7cd0d6679e791",
     "description": "Ubuntu 24.04",
-    "last_updated": "2026-09-26T19:02:41.000Z",
-    "last_updated_url": "https://github.com/edbfi/base-image/actions/runs/36264666345",
+    "last_updated": "2026-09-28T20:02:35.000Z",
+    "last_updated_url": "https://github.com/edbfi/base-image/actions/runs/36476402578",
     "tags": [
       "",
       "noblevpn",
-      "noblevpn-7d5b7da",
+      "noblevpn-25084a7",
       "",
       "",
       "",

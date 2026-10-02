@@ -16,15 +16,15 @@
     ]
   },
   "noblevpn": {
-    "commit_message": "Modified: packages.txt",
-    "commit_sha": "18678aee0eed4b03a229892b6f4459d3186e4b3e",
+    "commit_message": "Modified: meta.json",
+    "commit_sha": "07ac2d59f6e00085a0a46df7a07e2cd56d808353",
     "description": "Ubuntu 24.04",
-    "last_updated": "2026-09-29T19:04:17.000Z",
-    "last_updated_url": "https://github.com/edbfi/base-image/actions/runs/36616621621",
+    "last_updated": "2026-10-02T05:03:52.000Z",
+    "last_updated_url": "https://github.com/edbfi/base-image/actions/runs/36967271486",
     "tags": [
       "",
       "noblevpn",
-      "noblevpn-18678ae",
+      "noblevpn-07ac2d5",
       "",
       "",
       "",

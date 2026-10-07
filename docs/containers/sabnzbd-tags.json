@@ -33,14 +33,14 @@
   },
   "testing": {
     "commit_message": "Modified: meta.json",
-    "commit_sha": "250f93816e45283163ed2ebb739f60d22c18d891",
+    "commit_sha": "b55ac39b5cf3a8f8384568b54da2d020436f393e",
     "description": "Pre-releases",
-    "last_updated": "2026-10-06T22:04:12.000Z",
-    "last_updated_url": "https://github.com/edbfi/sabnzbd/actions/runs/37538196417",
+    "last_updated": "2026-10-07T09:06:40.000Z",
+    "last_updated_url": "https://github.com/edbfi/sabnzbd/actions/runs/37598340991",
     "tags": [
       "",
       "testing",
-      "testing-250f938",
+      "testing-b55ac39",
       "testing-5.2.0Beta2",
       "",
       "",

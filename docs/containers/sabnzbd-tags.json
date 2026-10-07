@@ -1,14 +1,14 @@
 {
   "nightly": {
     "commit_message": "Modified: meta.json",
-    "commit_sha": "8061d96390fb3ccd9face275cc2e815fe5f18b42",
+    "commit_sha": "f7f6885353ea4596096d4edcb1534fe7ff628a9c",
     "description": "Every commit to develop",
-    "last_updated": "2026-10-06T22:04:10.000Z",
-    "last_updated_url": "https://github.com/edbfi/sabnzbd/actions/runs/37538193156",
+    "last_updated": "2026-10-07T09:06:40.000Z",
+    "last_updated_url": "https://github.com/edbfi/sabnzbd/actions/runs/37598340368",
     "tags": [
       "",
       "nightly",
-      "nightly-8061d96",
+      "nightly-f7f6885",
       "nightly-cbda9451bb3c4143fa4d9d5c1c2b1ab8e5eb3d4d",
       "",
       "",

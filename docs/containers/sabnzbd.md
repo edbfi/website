@@ -1,13 +1,19 @@
 ---
 hide:
   - toc
-title: hotio/sabnzbd
+title: edbfi/sabnzbd
 ---
 
-[:octicons-mark-github-16: GitHub](https://github.com/hotio/sabnzbd){ class="header-links" target="_blank" rel="noopener" }  
-[:octicons-container-16: ghcr.io](https://github.com/orgs/hotio/packages/container/package/sabnzbd){ class="header-links" target="_blank" rel="noopener" }  
+[:octicons-mark-github-16: GitHub](https://github.com/edbfi/sabnzbd){ class="header-links" target="_blank" rel="noopener" }
+[:octicons-container-16: ghcr.io](https://github.com/users/edbfi/packages/container/package/sabnzbd){ class="header-links" target="_blank" rel="noopener" }
 
-[:octicons-link-16: Upstream Project](https://github.com/sabnzbd/sabnzbd){ class="header-links" target="_blank" rel="noopener" }  
+[:octicons-link-16: Upstream Project](https://sabnzbd.org){ class="header-links" target="_blank" rel="noopener" }
+
+<div class="image-logo"><img src="/img/image-logos/sabnzbd.svg" alt="logo"></div>
+
+!!! question "What is this?"
+
+    This is a fork of Hotio's [SABnzbd](https://hotio.dev/containers/sabnzbd) Docker image, that includes ffprobe, at `/app/bin/ffprobe`. Useful for scripts.
 
 <div id="tags-table">
   <table>
@@ -20,12 +26,14 @@ title: hotio/sabnzbd
       </tr>
     </thead>
     <tbody id="tags-table-body">
-<tr><td><div id="tag17880" onclick="CopyToClipboard('tag17880');return false;" class="tag-decoration">nightly</div><div id="tag27172" onclick="CopyToClipboard('tag27172');return false;" class="tag-decoration">nightly-0f60fbf</div><div id="tag30928" onclick="CopyToClipboard('tag30928');return false;" class="tag-decoration">nightly-cbda9451bb3c4143fa4d9d5c1c2b1ab8e5eb3d4d</div></td><td>Every commit to develop</td><td><a href="https://github.com/hotio/sabnzbd/commit/0f60fbf277dae25362f7618fd097a030edf0291e" target="_blank">Modified: meta.json</a></td><td><a href="https://github.com/hotio/sabnzbd/actions/runs/37560337815" target="_blank">2026-10-07 02:05:55</a></td></tr>
-<tr><td><div class="tag-decoration-latest">latest</div><div id="tag27327" onclick="CopyToClipboard('tag27327');return false;" class="tag-decoration">release</div><div id="tag29971" onclick="CopyToClipboard('tag29971');return false;" class="tag-decoration">release-daef7bb</div><div id="tag24276" onclick="CopyToClipboard('tag24276');return false;" class="tag-decoration">release-5.1.3</div><div id="tag7104" onclick="CopyToClipboard('tag7104');return false;" class="tag-decoration">release-v5</div><div id="tag21896" onclick="CopyToClipboard('tag21896');return false;" class="tag-decoration">release-v5.1</div><div id="tag379" onclick="CopyToClipboard('tag379');return false;" class="tag-decoration">release-v5.1.3</div></td><td>Releases</td><td><a href="https://github.com/hotio/sabnzbd/commit/daef7bbd0d0e74c05b7670580bb3052bb0105be2" target="_blank">Modified: meta.json</a></td><td><a href="https://github.com/hotio/sabnzbd/actions/runs/37560335109" target="_blank">2026-10-07 02:05:53</a></td></tr>
-<tr><td><div id="tag12682" onclick="CopyToClipboard('tag12682');return false;" class="tag-decoration">testing</div><div id="tag28382" onclick="CopyToClipboard('tag28382');return false;" class="tag-decoration">testing-bb6a9e4</div><div id="tag9791" onclick="CopyToClipboard('tag9791');return false;" class="tag-decoration">testing-5.2.0Beta2</div></td><td>Pre-releases</td><td><a href="https://github.com/hotio/sabnzbd/commit/bb6a9e476f5efe78eb544921eac2f211be81449b" target="_blank">Modified: meta.json</a></td><td><a href="https://github.com/hotio/sabnzbd/actions/runs/37560337319" target="_blank">2026-10-07 02:05:55</a></td></tr>
+<tr><td><div id="tag4491" onclick="CopyToClipboard('tag4491');return false;" class="tag-decoration">nightly</div><div id="tag12781" onclick="CopyToClipboard('tag12781');return false;" class="tag-decoration">nightly-8061d96</div><div id="tag17276" onclick="CopyToClipboard('tag17276');return false;" class="tag-decoration">nightly-cbda9451bb3c4143fa4d9d5c1c2b1ab8e5eb3d4d</div></td><td>Every commit to develop</td><td><a href="https://github.com/edbfi/sabnzbd/commit/8061d96390fb3ccd9face275cc2e815fe5f18b42" target="_blank">Modified: meta.json</a></td><td><a href="https://github.com/edbfi/sabnzbd/actions/runs/37538193156" target="_blank">2026-10-06 22:04:10</a></td></tr>
+<tr><td><div class="tag-decoration-latest">latest</div><div id="tag24492" onclick="CopyToClipboard('tag24492');return false;" class="tag-decoration">release</div><div id="tag25931" onclick="CopyToClipboard('tag25931');return false;" class="tag-decoration">release-2af0f2a</div><div id="tag14175" onclick="CopyToClipboard('tag14175');return false;" class="tag-decoration">release-5.1.3</div><div id="tag32190" onclick="CopyToClipboard('tag32190');return false;" class="tag-decoration">release-v5</div><div id="tag26239" onclick="CopyToClipboard('tag26239');return false;" class="tag-decoration">release-v5.1</div><div id="tag12523" onclick="CopyToClipboard('tag12523');return false;" class="tag-decoration">release-v5.1.3</div></td><td>Releases</td><td><a href="https://github.com/edbfi/sabnzbd/commit/2af0f2a05c7ecbe67fe39d25178e077a77c490b4" target="_blank">ci: add monthly immortality workflow (#37)--GitHub disables scheduled workflows in a public repository after 60 days without activity. This workflow re-enables the repository's workflows once a month with the IMMORTALITY_TOKEN personal token, which resets that counter. Owner-approved addition to the Hotio callers (2026-10-07).--Signed-off-by: edbfi <326875205+edbfi@users.noreply.github.com></a></td><td><a href="https://github.com/edbfi/sabnzbd/actions/runs/37594116659" target="_blank">2026-10-07 08:29:35</a></td></tr>
+<tr><td><div id="tag6553" onclick="CopyToClipboard('tag6553');return false;" class="tag-decoration">testing</div><div id="tag19855" onclick="CopyToClipboard('tag19855');return false;" class="tag-decoration">testing-250f938</div><div id="tag22838" onclick="CopyToClipboard('tag22838');return false;" class="tag-decoration">testing-5.2.0Beta2</div></td><td>Pre-releases</td><td><a href="https://github.com/edbfi/sabnzbd/commit/250f93816e45283163ed2ebb739f60d22c18d891" target="_blank">Modified: meta.json</a></td><td><a href="https://github.com/edbfi/sabnzbd/actions/runs/37538196417" target="_blank">2026-10-06 22:04:12</a></td></tr>
 </tbody>
   </table>
 </div>
+
+The `release` (also `latest`), `testing` and `nightly` images are published for amd64 and arm64 after native validation and review. Testing currently contains the same 5.1.3 release; nightly is a pinned 5.2.0 development snapshot. Updates and publication are manual.
 
 ## Starting the container
 
@@ -33,20 +41,18 @@ title: hotio/sabnzbd
 
     ```shell linenums="1"
     docker run --rm \
-        --name="sabnzbd" \
+        --name sabnzbd \
         -p 8080:8080 \
         -e PUID=1000 \
         -e PGID=1000 \
         -e UMASK=002 \
-        -e WEBUI_PORTS="8080/tcp" \ #(3)!
+        -e WEBUI_PORTS="8080/tcp,8080/udp" \
         -e ARGS="" \
         -e TZ="Etc/UTC" \
         -v /<host_folder_config>:/config \
         -v /<host_folder_data>:/data \
-        ghcr.io/hotio/sabnzbd
+        ghcr.io/edbfi/sabnzbd
     ```
-
-    --8<-- "includes/annotations.md"
 
 === "compose"
 
@@ -54,7 +60,7 @@ title: hotio/sabnzbd
     services:
       sabnzbd:
         container_name: sabnzbd
-        image: ghcr.io/hotio/sabnzbd
+        image: ghcr.io/edbfi/sabnzbd
         ports:
           - "8080:8080"
         environment:
@@ -62,13 +68,11 @@ title: hotio/sabnzbd
           - PGID=1000
           - UMASK=002
           - TZ=Etc/UTC
-          - WEBUI_PORTS=8080/tcp #(3)!
+          - WEBUI_PORTS=8080/tcp,8080/udp
           - ARGS
         volumes:
           - /<host_folder_config>:/config
           - /<host_folder_data>:/data
     ```
-
-    --8<-- "includes/annotations.md"
 
 --8<-- "includes/wireguard.md"

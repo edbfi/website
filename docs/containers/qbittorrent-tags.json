@@ -1,15 +1,14 @@
 {
   "release": {
-    "commit_message": "Modified: meta.json",
-    "commit_sha": "e9149fb2cdc7da4e73acc4df79494b4598cc56f0",
+    "commit_message": "ci: add monthly immortality workflow (#23)\n\nGitHub disables scheduled workflows in a public repository after 60 days without activity. This workflow re-enables the repository's workflows once a month with the IMMORTALITY_TOKEN personal token, which resets that counter. Owner-approved addition to the Hotio callers (2026-10-07).\n\nSigned-off-by: edbfi <326875205+edbfi@users.noreply.github.com>",
+    "commit_sha": "4465fc5df9252b8926e088f6912c7bb0b1f9d0b6",
     "description": "Releases",
-    "hide": false,
-    "last_updated": "2026-10-07T03:02:09.000Z",
-    "last_updated_url": "https://github.com/hotio/qbittorrent/actions/runs/37564852003",
+    "last_updated": "2026-10-07T08:29:23.000Z",
+    "last_updated_url": "https://github.com/edbfi/qbittorrent/actions/runs/37594095263",
     "tags": [
       "latest",
       "release",
-      "release-e9149fb",
+      "release-4465fc5",
       "release-5.2.4",
       "release-v5",
       "release-v5.2",

@@ -1,15 +1,14 @@
 {
   "release": {
-    "commit_message": "Modified: meta.json",
-    "commit_sha": "573cbae239f3621fe9112f455f2dd5ff5a625ad7",
+    "commit_message": "ci: add monthly immortality workflow (#25)\n\nGitHub disables scheduled workflows in a public repository after 60 days without activity. This workflow re-enables the repository's workflows once a month with the IMMORTALITY_TOKEN personal token, which resets that counter. Owner-approved addition to the Hotio callers (2026-10-07).\n\nSigned-off-by: edbfi <326875205+edbfi@users.noreply.github.com>",
+    "commit_sha": "83df0ae7919f838179d193f7ad1f2ad90df9dd14",
     "description": "Releases",
-    "hide": false,
-    "last_updated": "2026-10-07T00:25:33.000Z",
-    "last_updated_url": "https://github.com/hotio/caddy/actions/runs/37551896482",
+    "last_updated": "2026-10-07T08:29:18.000Z",
+    "last_updated_url": "https://github.com/edbfi/caddy/actions/runs/37594085976",
     "tags": [
       "latest",
       "release",
-      "release-573cbae",
+      "release-83df0ae",
       "release-2.11.7",
       "release-v2",
       "release-v2.11",

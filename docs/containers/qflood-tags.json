@@ -1,15 +1,15 @@
 {
   "nightly": {
     "commit_message": "Modified: meta.json",
-    "commit_sha": "7ca91c5881b425967ed7a050be64245d6fd55e81",
+    "commit_sha": "3d109ae4f9a2458cc89252ca2972251f7def431d",
     "description": "Nightly snapshot",
-    "last_updated": "2026-10-07T23:07:32.000Z",
-    "last_updated_url": "https://github.com/edbfi/qflood/actions/runs/37700429182",
+    "last_updated": "2026-10-08T00:13:34.000Z",
+    "last_updated_url": "https://github.com/edbfi/qflood/actions/runs/37706629964",
     "tags": [
       "",
       "nightly",
-      "nightly-7ca91c5",
-      "nightly-5.2.4--37136934745",
+      "nightly-3d109ae",
+      "nightly-5.2.4--37640532677",
       "nightly-v5",
       "nightly-v5.2",
       "nightly-v5.2.4"

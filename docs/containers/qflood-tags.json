@@ -1,15 +1,15 @@
 {
   "nightly": {
-    "commit_message": "fix(nightly): never let the Flood version step back (#33)\n\nversion_flood__command took the first run of GitHub's list of successful Flood rolling builds, which GitHub sometimes serves stale, so the nightly version could step back to an older run for an hour. Run ids only grow, so the Flood version is now the largest of the listed runs and the current version_flood, in both version_flood__command and version__command.\n\nSigned-off-by: edbfi <326875205+edbfi@users.noreply.github.com>",
-    "commit_sha": "02a91e18417863946c63cda934d5c83024247684",
+    "commit_message": "Modified: meta.json",
+    "commit_sha": "e5bcb74548566515b5faaa7189f10bc7b4ff72e5",
     "description": "Nightly snapshot",
-    "last_updated": "2026-10-11T10:05:37.000Z",
-    "last_updated_url": "https://github.com/edbfi/qflood/actions/runs/38130714005",
+    "last_updated": "2026-10-13T17:55:54.000Z",
+    "last_updated_url": "https://github.com/edbfi/qflood/actions/runs/38442646104",
     "tags": [
       "",
       "nightly",
-      "nightly-02a91e1",
-      "nightly-5.2.4--37640532677",
+      "nightly-e5bcb74",
+      "nightly-5.2.4--38399927091",
       "nightly-v5",
       "nightly-v5.2",
       "nightly-v5.2.4"

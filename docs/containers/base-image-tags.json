@@ -1,0 +1,34 @@
+{
+  "alpinevpn": {
+    "commit_message": "Modified: packages.txt",
+    "commit_sha": "259a13d28a7b18f2818764f9c9092f31631ec177",
+    "description": "Alpine 3.23",
+    "last_updated": "2026-10-27T18:29:01.000Z",
+    "last_updated_url": "https://github.com/edbfi/base-image/actions/runs/40560393745",
+    "tags": [
+      "",
+      "alpinevpn",
+      "alpinevpn-259a13d",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "noblevpn": {
+    "commit_message": "Modified: meta.json",
+    "commit_sha": "5cb2474aecac3351de0450d1a599175a2e8a408c",
+    "description": "Ubuntu 24.04",
+    "last_updated": "2026-10-27T12:56:24.000Z",
+    "last_updated_url": "https://github.com/edbfi/base-image/actions/runs/40507768302",
+    "tags": [
+      "",
+      "noblevpn",
+      "noblevpn-5cb2474",
+      "",
+      "",
+      "",
+      ""
+    ]
+  }
+}

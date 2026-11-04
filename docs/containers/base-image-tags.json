@@ -1,14 +1,14 @@
 {
   "alpinevpn": {
     "commit_message": "Modified: packages.txt",
-    "commit_sha": "9836adc647f0e050eff7695e63739fcd664506ec",
+    "commit_sha": "f3c0505102641ce8aa7305c8c6c02062ebe8b436",
     "description": "Alpine 3.23",
-    "last_updated": "2026-11-04T11:42:00.000Z",
-    "last_updated_url": "https://github.com/edbfi/base-image/actions/runs/41823045187",
+    "last_updated": "2026-11-04T18:58:51.000Z",
+    "last_updated_url": "https://github.com/edbfi/base-image/actions/runs/41892444362",
     "tags": [
       "",
       "alpinevpn",
-      "alpinevpn-9836adc",
+      "alpinevpn-f3c0505",
       "",
       "",
       "",

@@ -1,14 +1,14 @@
 {
   "release": {
-    "commit_message": "docs(readme): shrink logo and simplify container overview (#27)\n\nSigned-off-by: edbfi <326875205+edbfi@users.noreply.github.com>",
-    "commit_sha": "f936ee6dd955b32e428b38bcd18179e41a1dbabd",
+    "commit_message": "docs: add CI status to README badges (#28)\n\nSigned-off-by: edbfi <326875205+edbfi@users.noreply.github.com>",
+    "commit_sha": "9720fe117e3a9f0e1f84a630021944251e8f6b3e",
     "description": "Releases",
-    "last_updated": "2026-11-12T22:05:15.000Z",
-    "last_updated_url": "https://github.com/edbfi/caddy/actions/runs/43316570713",
+    "last_updated": "2026-11-13T09:10:21.000Z",
+    "last_updated_url": "https://github.com/edbfi/caddy/actions/runs/43399089185",
     "tags": [
       "latest",
       "release",
-      "release-f936ee6",
+      "release-9720fe1",
       "release-2.11.7",
       "release-v2",
       "release-v2.11",

@@ -16,15 +16,15 @@
     ]
   },
   "release": {
-    "commit_message": "docs(readme): refine qflood header and setup prose (#36)\n\nResize the existing logo to 160px and trim redundant container boilerplate while preserving authentication setup and upstream references.\n\nImplemented by GPT-6.1 Sol in T3 Code; coordinated by GPT-6 Astra in T3 Code.\n\nSigned-off-by: edbfi <326875205+edbfi@users.noreply.github.com>",
-    "commit_sha": "3499a6dbf4d2d44ce1d74da7c3a04ec39a55694a",
+    "commit_message": "docs: add CI status to README badges (#38)\n\nSigned-off-by: edbfi <326875205+edbfi@users.noreply.github.com>",
+    "commit_sha": "545a38e8c229c2bc286d3a5f95222e4dfeceb9c1",
     "description": "Releases",
-    "last_updated": "2026-11-12T23:04:24.000Z",
-    "last_updated_url": "https://github.com/edbfi/qflood/actions/runs/43325653171",
+    "last_updated": "2026-11-13T09:10:11.000Z",
+    "last_updated_url": "https://github.com/edbfi/qflood/actions/runs/43399065472",
     "tags": [
       "latest",
       "release",
-      "release-3499a6d",
+      "release-545a38e",
       "release-5.3.0--4.16.4",
       "release-v5",
       "release-v5.3",

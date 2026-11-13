@@ -1,19 +1,18 @@
 {
   "release": {
-    "commit_message": "Modified: meta.json",
-    "commit_sha": "8a1e3c548b43039da46f510533202292380ef332",
+    "commit_message": "docs(readme): shrink logo and simplify container overview (#27)\n\nSigned-off-by: edbfi <326875205+edbfi@users.noreply.github.com>",
+    "commit_sha": "f936ee6dd955b32e428b38bcd18179e41a1dbabd",
     "description": "Releases",
-    "hide": false,
-    "last_updated": "2026-11-07T01:41:40.000Z",
-    "last_updated_url": "https://github.com/hotio/caddy/actions/runs/42325436636",
+    "last_updated": "2026-11-12T22:05:15.000Z",
+    "last_updated_url": "https://github.com/edbfi/caddy/actions/runs/43316570713",
     "tags": [
       "latest",
       "release",
-      "release-8a1e3c5",
-      "release-2.11.9",
+      "release-f936ee6",
+      "release-2.11.7",
       "release-v2",
       "release-v2.11",
-      "release-v2.11.9"
+      "release-v2.11.7"
     ]
   }
 }

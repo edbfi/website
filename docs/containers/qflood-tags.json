@@ -1,0 +1,34 @@
+{
+  "nightly": {
+    "commit_message": "docs(readme): refine nightly qflood header and setup prose (#37)\n\nSigned-off-by: edbfi <326875205+edbfi@users.noreply.github.com>",
+    "commit_sha": "17b178783dda5f17573a47e6ef13c0ea3cb4ce4c",
+    "description": "Nightly snapshot",
+    "last_updated": "2026-11-12T23:25:04.000Z",
+    "last_updated_url": "https://github.com/edbfi/qflood/actions/runs/43328685231",
+    "tags": [
+      "",
+      "nightly",
+      "nightly-17b1787",
+      "nightly-5.3.0--43020125678",
+      "nightly-v5",
+      "nightly-v5.3",
+      "nightly-v5.3.0"
+    ]
+  },
+  "release": {
+    "commit_message": "docs(readme): refine qflood header and setup prose (#36)\n\nResize the existing logo to 160px and trim redundant container boilerplate while preserving authentication setup and upstream references.\n\nImplemented by GPT-6.1 Sol in T3 Code; coordinated by GPT-6 Astra in T3 Code.\n\nSigned-off-by: edbfi <326875205+edbfi@users.noreply.github.com>",
+    "commit_sha": "3499a6dbf4d2d44ce1d74da7c3a04ec39a55694a",
+    "description": "Releases",
+    "last_updated": "2026-11-12T23:04:24.000Z",
+    "last_updated_url": "https://github.com/edbfi/qflood/actions/runs/43325653171",
+    "tags": [
+      "latest",
+      "release",
+      "release-3499a6d",
+      "release-5.3.0--4.16.4",
+      "release-v5",
+      "release-v5.3",
+      "release-v5.3.0"
+    ]
+  }
+}

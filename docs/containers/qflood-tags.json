@@ -1,14 +1,14 @@
 {
   "nightly": {
-    "commit_message": "docs(readme): refine nightly qflood header and setup prose (#37)\n\nSigned-off-by: edbfi <326875205+edbfi@users.noreply.github.com>",
-    "commit_sha": "17b178783dda5f17573a47e6ef13c0ea3cb4ce4c",
+    "commit_message": "Modified: meta.json",
+    "commit_sha": "1092969e8096a9724c9914abeebcb0495f810b73",
     "description": "Nightly snapshot",
-    "last_updated": "2026-11-12T23:25:04.000Z",
-    "last_updated_url": "https://github.com/edbfi/qflood/actions/runs/43328685231",
+    "last_updated": "2026-11-24T03:46:46.000Z",
+    "last_updated_url": "https://github.com/edbfi/qflood/actions/runs/45321845678",
     "tags": [
       "",
       "nightly",
-      "nightly-17b1787",
+      "nightly-1092969",
       "nightly-5.3.0--43020125678",
       "nightly-v5",
       "nightly-v5.3",
